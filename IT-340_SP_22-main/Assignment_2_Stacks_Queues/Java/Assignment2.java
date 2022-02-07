@@ -12,28 +12,35 @@ public class Assignment2 {
   
   public String pop() {
    if(!isEmpty()) {
-   String value = fruit.get(fruit.size()-1);
-   fruit.remove(fruit.size()-1);
+     String value = fruit.get(fruit.size()-1);
+     fruit.remove(fruit.size()-1);
    return value;
    }
    else {
     System.out.println("There is nothing to pop");
-    return null;
+      return null;
    }
   }
   public boolean isEmpty() {
-   return fruit.size()==0;   
+    return fruit.size()==0;
   }
   public void printStack() {
  System.out.println("---Stack----");
- //loop structure and print it out //see the structure as D,C,B,A //backwards
+ //loop structure and print it out
 
-   
+   for(int i=0; i<fruit.size(); i++){
+
+    System.out.println(fruit.get(i));
+
+   }
+
+
 
   }
   
   public Stack() {
      //int i = fruit.size;
+
     
   }
 
@@ -43,16 +50,23 @@ public class Assignment2 {
 
   public void enqueue(String node) {
 
+
+
   }
 
 
   public String dequeue() {
 
+   //todo
+   return null;
   }
   public boolean isEmpty() {
 
+   //todo
+   return false;
   }
   public void printQueue() {
+
 
   }
 
