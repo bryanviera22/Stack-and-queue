@@ -28,19 +28,15 @@ public class Assignment2 {
  System.out.println("---Stack----");
  //loop structure and print it out
 
-   for(int i=0; i<fruit.size(); i++){
-
+   for(int i = fruit.size()-1; i>= 0; i--){
     System.out.println(fruit.get(i));
-
    }
-
 
 
   }
   
   public Stack() {
      //int i = fruit.size;
-
     
   }
 
@@ -49,23 +45,35 @@ public class Assignment2 {
  public class Queue{
 
   public void enqueue(String node) {
-
-
-
+   q.add(node);
   }
 
 
   public String dequeue() {
 
    //todo
-   return null;
+   if(!isEmpty()){
+     String value = q.get(q.size()-1);
+     q.remove(q.get(0));
+     return value;
+   }
+    else{
+      System.out.println("There is nothing to dequeue");
+    return null;
+   }
   }
   public boolean isEmpty() {
-
+   return q.size()==0;
    //todo
-   return false;
+   //return false;
   }
   public void printQueue() {
+   System.out.println("\n---Queue----");
+   //loop structure and print it out
+
+   for(int i=0; i<q.size(); i++){
+    System.out.println(q.get(i));
+   }
 
 
   }
